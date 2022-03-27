@@ -1,0 +1,34 @@
+.custom-control {
+  padding-right: 1.5rem;
+  padding-left: inherit;
+}
+
+.custom-control-input {
+  right: 0;
+  left: auto;
+}
+
+.custom-control-label {
+  &::before,
+  &::after {
+    right: -1.5rem;
+    left: auto;
+  }
+}
+
+.custom-select {
+  padding: $custom-select-padding-y $custom-select-padding-x $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding);
+  background-position: left $custom-select-padding-x center;
+}
+
+.custom-file-label::after {
+  right: auto;
+  left: 0;
+  border-right: inherit;
+  border-left: none;
+  border-radius: $border-radius 0 0 $border-radius;
+}
+
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "انتخاب";
+}

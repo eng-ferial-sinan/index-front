@@ -1,0 +1,14 @@
+.dropdown {
+  &-menu {
+    right: 0 !important;
+    left: auto !important;
+    text-align: right;
+  }
+
+  &-toggle {
+    &::after {
+      margin-right: $caret-spacing;
+      margin-left: 0;
+    }
+  }
+}

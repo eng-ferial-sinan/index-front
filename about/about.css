@@ -1,0 +1,481 @@
+
+.active {
+  /* background-color: #ffc107; */
+  color: white;
+}
+@font-face {
+  font-family:"Cairo", sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Cairo');
+}
+body {margin:0;
+  font-family:"Cairo", sans-serif;
+  direction: rtl;}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  /* -ms-flex-wrap: wrap; */
+  padding: 2.75rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  /* justify-content: center; */
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgba(0,0,0,.9);
+  background-color: #ffc107;
+}
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+.fullwidth
+{
+  width: 100%;
+}
+.mr-5, .mx-5 {
+  margin-left: 0rem!important;
+}
+.mt-20{
+  margin-top: 5% !important;
+}
+.mb-20{
+  margin-bottom: 10% !important;
+}
+.imag {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+  padding-bottom: 10%;
+}
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 90%;
+  padding-right: 10%;
+  overflow: hidden;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+.col-md-4
+{position: relative;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;}
+.color{
+  color: #43a9d9;
+  margin-right:2%;
+}
+.bg-light {
+  background-color: #186785!important;
+}
+
+.center{
+  text-align: center;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* flex-wrap: inherit; */
+  margin-right: -15px;
+  margin-left: -15px;
+  width: 100%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+/* button up to back */
+.scroll {
+  color: #fff;
+  margin-top: 100px
+}
+
+#toTopBtn {
+  position: fixed;
+  bottom: 26px;
+  right: 39px;
+  z-index: 98;
+  padding: 21px;
+  background-color: hsla(5, 76%, 62%, .8)
+}
+
+.js .cd-top--fade-out {
+  opacity: .5
+}
+
+.js .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1
+}
+
+.js .cd-top {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s, background-color .3s
+}
+
+.cd-top {
+  position: fixed;
+  bottom: 20px;
+  bottom: var(--cd-back-to-top-margin);
+  right: 20px;
+  right: var(--cd-back-to-top-margin);
+  display: inline-block;
+  height: 40px;
+  height: var(--cd-back-to-top-size);
+  width: 40px;
+  width: var(--cd-back-to-top-size);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+  background-color: hsla(5, 76%, 62%, .8);
+  background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+}
+
+.height {
+  height: 3000px
+}
+/* css team */
+
+/* Team */
+
+.team-member {
+  background: #fff;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.team-member .team-photo {
+  background: #fff;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 24px 24px 32px 24px;
+}
+
+.team-member .team-attrs {
+  padding: 2px 16px 16px 16px;
+  color: #303030;
+}
+
+.team-member .team-attrs .team-name {
+  font-size: 21px;
+  color: #186785;
+}
+
+.team-member .team-attrs .team-position {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #fcaf17;
+}
+
+.team-member .team-content {
+  color: #303030;
+  opacity: .8;
+  padding: 16px 24px 40px 24px;
+}
+
+.team-member:hover {
+  box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.2);
+}
+
+.bg-primary {
+  background-color: #186785!important;
+}
+/*------------------------------------------------------------------
+[10. Hover Effects]
+*/
+
+.item-wrap {
+  margin-bottom: 30px;
+}
+
+figure {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+figure img {
+  position: relative;
+  opacity: 1.0;
+}
+
+figure figcaption {
+  padding: 1.0em;
+  color: #303030;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure figcaption > .fig-description a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+figure figcaption:before,
+figure figcaption:after {
+  pointer-events: none;
+}
+
+figure figcaption,
+figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+figure h3 {
+  word-spacing: -0.15em;
+  font-family: "Montserrat", sans-serif;
+}
+
+figure h3 span {
+  font-family: "Montserrat", sans-serif;
+}
+
+figure h3,
+figure p {
+  margin: 0;
+}
+
+figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+
+/* Team Hover */
+
+figure.effect-zoe {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  min-width: 200px;
+  max-height: none;
+  max-width: none;
+  float: none;
+}
+
+figure.effect-zoe img {
+  display: inline-block;
+  opacity: 1;
+}
+
+figure.effect-zoe p.icon-links {
+  margin: 0px;
+}
+
+figure.effect-zoe p.icon-links a {
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0);
+}
+
+figure.effect-zoe p.icon-links a i::before {
+  color: #fff;
+  font-size: 24px;
+  display: inline-block;
+  padding: 15px 10px;
+  margin-left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+figure.effect-zoe p.icon-links a:hover i::before {
+  color: #f2f2f2;
+}
+
+figure.effect-zoe p.phone-number a {
+  color: #fff;
+  font-size: 12px;
+}
+
+figure.effect-zoe p.phone-number a:hover {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+figure.effect-zoe figcaption {
+  top: auto;
+  bottom: 0;
+  padding: 0;
+  height: 8em;
+  background: #a7a7a7;
+  border-top: 3px solid #fff;
+  color: #5d5d5d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+figure.effect-zoe:hover figcaption,
+figure.effect-zoe:hover h2,
+figure.effect-zoe:hover p.icon-links a {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure.effect-zoe:hover p.icon-links a:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+figure.effect-zoe:hover p.icon-links a:nth-child(2) {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+figure.effect-zoe:hover p.icon-links a:first-child {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+/* css text animation */
+
+h1{
+  /* font-family: 'Teko', sans-serif; */
+  text-transform: uppercase;
+  font-size: 400%;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0;
+  /* min-height: calc(100vh - 16px); */
+  background: white;
+  position: relative;
+  /* background: #171717; */
+  color: #000;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  /* margin-bottom: 0.5rem; */
+  font-weight: 400;
+  line-height: 1.1;
+}
+h1:before{
+  content: attr(data-text);
+  position: absolute;
+  background: linear-gradient(#f70000, #f89200, #f8f501, #038f00,#0168f8, #a200f7);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 90%;
+  line-height: 0.9;
+  clip-path: ellipse(120px 120px at -2.54% -9.25%);
+  animation: swing 5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes swing{
+  0%{
+     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)
+    clip-path: ellipse(120px 120px at -2.54% -9.25%)
+  }
+  50%{
+    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+    clip-path: ellipse(120px 120px at 49.66% 64.36%);
+
+  }
+  100%{
+     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);
+    clip-path: ellipse(120px 120px at 102.62% -1.61%);
+  }
+}
+a {
+  color: #fcaf17;
+  text-decoration: none;
+  background-color: transparent;
+}
+/* css name section 2 */
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  }
+
+/* html, body {
+  height: 100%;
+  } */
+ 
+  body {
+    text-align: center;
+    /* background-color: hsla(230,40%,50%,1); */
+    }
+  body:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    height: 100%;
+    }
+  h2 {
+    display: inline-block;
+    color: #186785;
+    font-family: 'Righteous', serif;
+    font-size: 12em;
+    text-shadow: 0.03em 0.03em 0 #dee2e6;
+    margin-top: 5%;
+}
+  h2:after {
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: shad-anim 15s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }

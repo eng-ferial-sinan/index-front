@@ -1,0 +1,18 @@
+.carousel-control-next {
+  right: auto;
+  left: 0;
+}
+
+.carousel-control-prev {
+  right: 0;
+  left: auto;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  transform: rotate(180deg);
+}
+
+.carousel-indicators {
+  padding-right: 0;
+}
