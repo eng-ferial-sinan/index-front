@@ -73,6 +73,7 @@ padding-left: 15px;}
 .color{
   color: #43a9d9;
   margin-right:2%;
+  text-align: right;
 }
 .bg-light {
   background-color: #186785!important;
@@ -183,110 +184,146 @@ padding-left: 15px;}
 .height {
   height: 3000px
 }
-/* css hovermouse */
-.box{
-  font-family: 'Merriweather Sans', sans-serif;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  transition: all .5s;
+/* css gallary */
+/*
+    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+    code customized by Azmind.com
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Show 4th slide on md if col-md-4*/
+  .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.3333%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
 }
-.box:hover{ box-shadow: 3px 3px 5px #999; }
-.box:before,
-.box:after{
-  content: "";
-  background: radial-gradient(circle at 23% 70%,rgba(255,255,255,0.8),#fff 30%);
-  width: 150%;
-  height: 150%;
-  opacity: 0;
-  transform: rotate(45deg);
-  position: absolute;
-  top:-10.5%;
-  right:-150%;
-  z-index: 1;
-  transition: all 0.35s ease;
+/* Show 3rd slide on sm if col-sm-6*/
+@media (min-width: 576px) and (max-width: 768px) {
+  .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -50%;  
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
 }
-.box:after{
-  background: rgba(255,255,255,0.5);
-  width: 65%;
-  height: 65%;
-  right: auto;
-  left: -20%;
-  top: -65%;
+@media (min-width: 576px) {
+  .carousel-item {
+      margin-right: 0;
+      margin-left: 0;
+  }
+  /* @media (max-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+        padding-right: 0%;
+        padding-left: 0%;
+    } */
+  /* show 2 items */
+  .carousel-inner .active + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+      transition: none;
+  }
+  .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* farthest right hidden item must be also positioned for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
 }
-.box:hover:before{
-  opacity: 1;
-  right: -85%;
+/* MD */
+@media (min-width: 768px) {
+  /* show 3rd of 3 item slide */
+  .carousel-inner .active + .carousel-item + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      transition: none;
+  }
+  .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+  /* left or forward direction */
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* right or prev direction */
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
 }
-.box:hover:after{
-  opacity: 1;
-  top: -42%;
+/* LG */
+@media (min-width: 991px) {
+  /* show 4th item */
+  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+      transition: none;
+  }
+  /* Show 5th slide on lg if col-lg-3 */
+  .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -25%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+  /* left or forward direction */
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* right or prev direction //t - previous slide direction last item animation fix */
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
 }
-.box img{
-  width: 100%;
-  height: auto;
-  transition: all 0.5s ease;
-}
-.box:hover img{ transform: scale(1.2); }
-.box .box-content{
-  text-align: right;
-  transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  right: -100%;
-  z-index: 2;
-  transition: all .5s;
-}
-.box:hover .box-content{ right: 5%; }
-.box .title{
-  color: #1e272e;
-  font-size: 23px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0 0 3px 0;
-}
-.box .post{
-  font-size: 16px;
-  text-transform: capitalize;
-  margin: 0 0 10px;
-  display: block;
-}
-.box .icon{
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.box .icon li{
-  display: inline-block;
-  margin: 0 4px;
-}
-.box .icon li a{
-  color: #fff;
-  background-color: #1e272e;
-  font-size: 18px;
-  text-align: center;
-  line-height: 35px;
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  display: block;
-  transition: all 0.3s;
-}
-.box .icon li  a:hover{
-  color: #1e272e;
-  background-color: #fff;
-  border-radius: 10%;
-  box-shadow: 0 0 5px #1e272e inset;
-}
-@media only screen and (max-width:990px){
-  .box { margin: 0 0 30px; }
-}
-@media only screen and (max-width:479px){
-  .box .title{ font-size: 20px; }
-}
-/* css name section */
-@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
-
+/* end css gallary */
 /* body {
    display: flex;
    justify-content: center;
@@ -388,4 +425,7 @@ padding-left: 15px;}
   }
   .bg-primary {
     background-color: #186785!important;
+}
+.row{
+  width: 100%;
 }
