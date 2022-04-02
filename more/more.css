@@ -444,3 +444,15 @@ padding-left: 15px;}
     padding-top: 8%;
   }
 }
+.box-shadow {
+  box-shadow: 3px 2px 18px 0px #dae0e5;
+}
+
+a {
+  color: #fcaf17;
+  text-decoration: none;
+  background-color: transparent;
+}
+.breadcrumb-item.active {
+  color: #0f5276;
+}

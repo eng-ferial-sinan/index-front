@@ -494,3 +494,6 @@ a {
     padding-top: 8%;
   }
 }
+.breadcrumb-item.active {
+  color: #0f5276;
+}
